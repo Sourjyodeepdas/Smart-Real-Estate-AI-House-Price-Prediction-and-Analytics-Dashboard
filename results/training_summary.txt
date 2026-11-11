@@ -1,0 +1,21 @@
+SMART REAL ESTATE AI
+CALIFORNIA HOUSING MODEL TRAINING
+
+Dataset rows: 20640
+Features: MedInc, HouseAge, AveRooms, AveBedrms, Population, AveOccup, Latitude, Longitude
+Target: MedHouseVal
+Train/test split: 80/20
+Random state: 42
+
+MODEL COMPARISON
+                  Model      MAE     RMSE       R2  Training_Time_Seconds
+          Decision Tree 0.434280 0.666350 0.661158               0.111577
+ Original Random Forest 0.326790 0.504290 0.805932               5.261262
+Optimized Random Forest 0.330183 0.507163 0.803714               1.061336
+
+OPTIMIZED RANDOM FOREST SETTINGS
+{'n_estimators': 50, 'max_depth': 18, 'min_samples_leaf': 2}
+
+Compressed model size: 5.08 MB
+
+MedHouseVal represents census block-group median house value in units of $100,000, not an individual-property appraisal.
